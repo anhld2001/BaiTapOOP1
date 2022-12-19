@@ -9,7 +9,6 @@ namespace Bai2
 {
     internal class TestCandidate
     {
-
         private List<Candidate> ds;
         public TestCandidate()
         {
@@ -20,14 +19,13 @@ namespace Bai2
 
         public void Nhap()
         {
-            
             int n;
             do
             {
                 Console.WriteLine("Moi nhap so luong sinh vien : ");
                 n = int.Parse(Console.ReadLine());
-            }while(n <= 0);
-            
+            }
+            while(n <= 0);
             for(int i = 0; i< n; i++)
             {
                 Candidate can = new Candidate();
@@ -47,7 +45,8 @@ namespace Bai2
                 ds.Add(can);
             }
         }
-        public void search()
+
+        public void Search()
         {
             foreach(Candidate item in ds)
             {

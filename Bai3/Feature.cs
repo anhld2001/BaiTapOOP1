@@ -8,10 +8,10 @@ namespace Bai3
 {
     internal class Feature
     {
-        private List<Student> student;
+        private List<Student> students;
         public Feature()
         {
-            this.student = new List<Student>();
+            this.students = new List<Student>();
         }
         public void Nhap()
         {
@@ -26,7 +26,7 @@ namespace Bai3
             ds.address = Console.ReadLine();
             Console.WriteLine("Moi nhap diem gpa : ");
             ds.gpa = float.Parse(Console.ReadLine());
-            student.Add(ds);
+            students.Add(ds);
             hienThi();
         }
         public void Sua()
@@ -34,7 +34,7 @@ namespace Bai3
             string id1;
             Console.WriteLine("Moi nhap vao id : ");
             id1 = Console.ReadLine();
-            var mark = (from stu in student where stu.id == id1 select stu).First();
+            var mark = (from stu in students where stu.id == id1 select stu).First();
             Console.WriteLine("Moi nhap id : ");
             mark.id = Console.ReadLine();
             Console.WriteLine("Moi nhap ten : ");
@@ -53,15 +53,15 @@ namespace Bai3
             string id1;
             Console.WriteLine("Moi nhap vao id : ");
             id1 = Console.ReadLine();
-            var mark = (from stu in student where stu.id == id1 select stu).First();
-            student.Remove(mark);
+            var mark = (from stu in students where stu.id == id1 select stu).First();
+            students.Remove(mark);
             Console.WriteLine("Danh sach sau khi xoa : ");
             hienThi();
         }
         public void SortByGPA()
         {
             
-            var mark = from stu in student orderby stu.gpa descending select stu;
+            var mark = from stu in students orderby stu.gpa descending select stu;
             Console.WriteLine($"{"ID"} {"Name",20} {"Age",20} {"Address",20} {"GPA",20}");
             foreach (Student item in mark)
             {
@@ -72,7 +72,7 @@ namespace Bai3
         public void SortByName()
         {
            
-            var mark = from stu in student orderby stu.name descending select stu;
+            var mark = from stu in students orderby stu.name descending select stu;
             Console.WriteLine($"{"ID"} {"Name",20} {"Age",20} {"Address",20} {"GPA",20}");
             foreach (Student item in mark)
             {

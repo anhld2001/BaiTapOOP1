@@ -1,26 +1,27 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Bai1;
 
-PhanSo ps = new PhanSo();
+PhanSo ps1 = new PhanSo();
+PhanSo ps2 = new PhanSo();
 do
 {
     Console.WriteLine("Nhap vao tu so 1");
-    ps.tuSo1 = int.Parse(Console.ReadLine());
+    ps1.tuSo = int.Parse(Console.ReadLine());
     Console.WriteLine("Nhap vao mau so 1");
-    ps.mauSo1 = int.Parse(Console.ReadLine());
+    ps1.mauSo = int.Parse(Console.ReadLine());
     Console.WriteLine("Nhap vao tu so 2");
-    ps.tuSo2 = int.Parse(Console.ReadLine());
+    ps2.tuSo = int.Parse(Console.ReadLine());
     Console.WriteLine("Nhap vao mau so 2");
-    ps.mauSo2 = int.Parse(Console.ReadLine());
+    ps2.mauSo = int.Parse(Console.ReadLine());
 }
-while (ps.mauSo2 == 0 || ps.mauSo1 == 0);
-float cong = ps.CongPS();
+while (ps1.mauSo == 0 || ps2.mauSo == 0);
+float cong = (ps1.tuSo * ps2.mauSo + ps2.tuSo * ps1.mauSo) / (ps1.mauSo * ps2.mauSo);
 Console.WriteLine("Ket qua cong la: " + cong);
-float tru = ps.TruPS();
+float tru = float cong = (ps1.tuSo * ps2.mauSo - ps2.tuSo * ps1.mauSo) / (ps1.mauSo * ps2.mauSo);
 Console.WriteLine("Ket qua tru la: " + tru);
-float nhan = ps.NhanPS();
+float nhan = float cong = (ps1.tuSo * ps2.tuSo) / (ps1.mauSo * ps2.mauSo);
 Console.WriteLine("Ket qua nhan la: " + nhan);
-float chia = ps.ChiaPS();
+float chia = float cong = (ps1.tuSo * ps2.mauSo) / (ps2.tuSo * ps1.mauSo);
 Console.WriteLine("Ket qua chia ela: " + chia);
 Console.ReadKey();
 
