@@ -8,13 +8,13 @@ namespace Bai1
 {
     internal class phanSo
     {
-        public float tuSo { get; set; }
-        public float mauSo { get; set; }
+        public float TuSo { get; set; }
+        public float MauSo { get; set; }
         public phanSo();
-        public phanSo(float tuSo, float mauSo)
+        public phanSo(float MuSo, float MauSo)
         {
-            tuSo = this.tuSo;
-            mauSo= this.mauSo;
+            TuSo = this.TuSo;
+            MauSo= this.MauSo;
         }
     }
 }

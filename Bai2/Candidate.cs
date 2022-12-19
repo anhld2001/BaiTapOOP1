@@ -8,22 +8,22 @@ namespace Bai2
 {
     internal class Candidate
     {
-        public string id { get; set; }
-        public string name { get; set; }
-        public string date { get; set; }
-        public int math { get; set; }
-        public int lit { get; set; }
-        public int eng { get; set; }
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string Date { get; set; }
+        public int Math { get; set; }
+        public int Lit { get; set; }
+        public int Eng { get; set; }
 
         public Candidate() { }
-        public Candidate(string id, string name, string date, int math, int lit, int eng)
+        public Candidate(string Id, string Name, string Date, int Math, int Lit, int Eng)
         {
-            this.id = id;
-            this.name = name;
-            this.date = date;
-            this.math = math;
-            this.lit = lit;
-            this.eng = eng;
+            this.Id = Id;
+            this.Name = Name;
+            this.Date = Date;
+            this.Math = Math;
+            this.Lit = Lit;
+            this.Eng = Eng;
         }
         
     }
