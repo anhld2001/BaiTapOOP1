@@ -1,7 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Bai3;
 
-Feature cn = new Feature();
+
+Student cn = new Student();
 int choose;
 
 do
@@ -34,7 +35,7 @@ do
             cn.SortByName();
             break;
         case 6:
-                cn.hienThi();
+            cn.hienThi();
             break;
         case 0:
             System.Environment.Exit(0);

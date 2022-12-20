@@ -13,7 +13,7 @@ namespace Bai3
         public string Age { get; set; }
         public string Address { get; set; }
         public float Gpa { get; set; }
-        private List<Student> students;
+        public List<Student> students = new List<Student>();
         public Student() { }
         public Student(string id, string name, string age, string address, float gpa)
         {
@@ -25,18 +25,17 @@ namespace Bai3
         }
         public void Nhap()
         {
-            Student ds = new Student();
             Console.WriteLine("Moi nhap id : ");
-            ds.Id = Console.ReadLine();
+            this.Id = Console.ReadLine();
             Console.WriteLine("Moi nhap ten : ");
-            ds.Name = Console.ReadLine();
+            this.Name = Console.ReadLine();
             Console.WriteLine("Moi nhap tuoi : ");
-            ds.Age = Console.ReadLine();
+            this.Age = Console.ReadLine();
             Console.WriteLine("Moi nhap dia chi : ");
-            ds.Address = Console.ReadLine();
+            this.Address = Console.ReadLine();
             Console.WriteLine("Moi nhap diem gpa : ");
-            ds.Gpa = float.Parse(Console.ReadLine());
-            students.Add(ds);
+            this.Gpa = float.Parse(Console.ReadLine());
+            students.Add(this);
             hienThi();
         }
         public void Sua()
@@ -86,14 +85,14 @@ namespace Bai3
             Console.WriteLine($"{"ID"} {"Name",20} {"Age",20} {"Address",20} {"GPA",20}");
             foreach (Student item in mark)
             {
-                Console.WriteLine($"{item.Id} {item.Name,20} {item.Age,20} {item.Address,20} {item.Apa,20}");
+                Console.WriteLine($"{item.Id} {item.Name,20} {item.Age,20} {item.Address,20} {item.Gpa,20}");
 
             }
         }
         public void hienThi()
         {
             Console.WriteLine($"{"ID"} {"Name",20} {"Age",20} {"Address",20} {"GPA",20}");
-            foreach (Student item in student)
+            foreach (Student item in students)
             {
                 Console.WriteLine($"{item.Id} {item.Name,20} {item.Age,20} {item.Address,20} {item.Gpa,20}");
 
