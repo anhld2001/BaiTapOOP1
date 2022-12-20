@@ -13,7 +13,6 @@ namespace Bai3
         public string Age { get; set; }
         public string Address { get; set; }
         public float Gpa { get; set; }
-        public List<Student> students = new List<Student>();
         public Student() { }
         public Student(string id, string name, string age, string address, float gpa)
         {
@@ -23,7 +22,7 @@ namespace Bai3
             this.Address = address;
             this.Gpa = gpa;
         }
-        public void Nhap()
+        public void Nhap(List<Student> students)
         {
             Console.WriteLine("Moi nhap id : ");
             this.Id = Console.ReadLine();
@@ -36,9 +35,9 @@ namespace Bai3
             Console.WriteLine("Moi nhap diem gpa : ");
             this.Gpa = float.Parse(Console.ReadLine());
             students.Add(this);
-            hienThi();
+            hienThi(students);
         }
-        public void Sua()
+        public void Sua(List<Student> students)
         {
             string Id1;
             Console.WriteLine("Moi nhap vao id : ");
@@ -55,9 +54,9 @@ namespace Bai3
             Console.WriteLine("Moi nhap diem gpa : ");
             mark.Gpa = float.Parse(Console.ReadLine());
             Console.WriteLine("Danh sach sau khi sua la: ");
-            hienThi();
+            hienThi(students);
         }
-        public void Xoa()
+        public void Xoa(List<Student> students)
         {
             string Id1;
             Console.WriteLine("Moi nhap vao id : ");
@@ -65,9 +64,9 @@ namespace Bai3
             var mark = (from stu in students where stu.Id == Id1 select stu).First();
             students.Remove(mark);
             Console.WriteLine("Danh sach sau khi xoa : ");
-            hienThi();
+            hienThi(students);
         }
-        public void SortByGPA()
+        public void SortByGPA(List<Student> students)
         {
 
             var mark = from stu in students orderby stu.Gpa descending select stu;
@@ -78,7 +77,7 @@ namespace Bai3
 
             }
         }
-        public void SortByName()
+        public void SortByName(List<Student> students)
         {
 
             var mark = from stu in students orderby stu.Name descending select stu;
@@ -89,7 +88,7 @@ namespace Bai3
 
             }
         }
-        public void hienThi()
+        public void hienThi(List<Student> students)
         {
             Console.WriteLine($"{"ID"} {"Name",20} {"Age",20} {"Address",20} {"GPA",20}");
             foreach (Student item in students)

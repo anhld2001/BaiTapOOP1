@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Bai3;
 
-
+List<Student> stu = new List<Student>();
 Student cn = new Student();
 int choose;
 
@@ -20,22 +20,22 @@ do
     switch (choose)
     {
         case 1:
-            cn.Nhap();
+            cn.Nhap(stu);
             break;
         case 2:
-            cn.Sua();
+            cn.Sua(stu);
             break;
         case 3:
-            cn.Xoa();
+            cn.Xoa(stu);
             break;
         case 4:
-            cn.SortByGPA();
+            cn.SortByGPA(stu);
             break;
         case 5:
-            cn.SortByName();
+            cn.SortByName(stu);
             break;
         case 6:
-            cn.hienThi();
+            cn.hienThi(stu);
             break;
         case 0:
             System.Environment.Exit(0);
