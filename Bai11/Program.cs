@@ -2,14 +2,14 @@
 int n;
 Console.WriteLine("Nhap vao so phan tu cua mang");
 n = int.Parse(Console.ReadLine());
-int[] mang = new int[n];
-int tong = 0;
+int[] Mang = new int[n];
+int Tong = 0;
 for (int i = 0; i< n; i++)
 {
     Console.WriteLine("Nhap phan tu thu " + (i + 1) +" : ");
-    mang[i] = int.Parse(Console.ReadLine());
-    tong = tong + mang[i];
+    Mang[i] = int.Parse(Console.ReadLine());
+    Tong = Tong + Mang[i];
 }
-Console.WriteLine("Tong la: " + tong);
+Console.WriteLine("Tong la: " + Tong);
 Console.ReadKey();
 

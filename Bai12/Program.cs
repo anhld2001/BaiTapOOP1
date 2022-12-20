@@ -1,36 +1,36 @@
 ﻿// See https://aka.ms/new-console-template for more information
-bool check = false;
+bool Check = false;
 do
 {
     Console.WriteLine("Nhap vao so phan tu cua mang: ");
     int n = int.Parse(Console.ReadLine());
-    int[] mang = new int[n];
+    int[] Mang = new int[n];
     for (int i = 0; i < n; i++)
     {
         Console.WriteLine("Nhap vao phan tu cua mang: ");
-        mang[i] = int.Parse(Console.ReadLine());
-        if (mang[i] <= 0)
+        Mang[i] = int.Parse(Console.ReadLine());
+        if (Mang[i] <= 0)
         {
             Console.WriteLine("Phan tu phai la so duong");
-            check = true;
+            Check = true;
             break;
         }
         else
-            check= false;
+            Check= false;
     }
-    int max = 0;
-    if(check == false)
+    int Max = Mang[0];
+    if(Check == false)
     {
         for (int i = 0; i < n; i++)
         {
-            if (max < mang[i])
+            if (Max < Mang[i])
             {
-                max = mang[i];
+                Max = Mang[i];
             }
         }
-        Console.WriteLine("So lon nhat la: " + max);
+        Console.WriteLine("So lon nhat la: " + Max);
     }    
 }
-while (check == true);
+while (Check == true);
 Console.ReadKey();
 
